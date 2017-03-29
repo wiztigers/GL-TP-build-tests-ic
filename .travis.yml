@@ -2,3 +2,6 @@ language: java
 sudo: false
 #décommenter la ligne suivante pour le build maven
 #script: mvn clean verify
+
+after_success:
+ - javadoc -private -sourcepath "src/main/java:src/test/java" -d doc/ fr.unistra.fizzbuzz
