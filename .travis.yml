@@ -1,3 +1,4 @@
 language: java
 sudo: false
-script: mvn clean verify
+#décommenter la ligne suivante pour le build maven
+#script: mvn clean verify
