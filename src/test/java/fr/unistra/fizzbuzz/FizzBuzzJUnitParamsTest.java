@@ -15,24 +15,24 @@ public class FizzBuzzJUnitParamsTest {
 	@Test
 	@Parameters({"1", "2", "4", "7", "11", "13", "14"})
 	public void returnsNumberForInputNotDivisibleByThreeOrFive(int number) {
-		assertThat(fizzbuzz.calculate(number)).isEqualTo("" + number);
+		assertThat(fizzbuzz.convert(number)).isEqualTo("" + number);
 	}
 
 	@Test
 	@Parameters({"3", "6", "9", "12", "18", "21", "24"})
 	public void returnFizzForInputDivisibleByThree(int number) {
-		assertThat(fizzbuzz.calculate(number)).isEqualTo("Fizz");
+		assertThat(fizzbuzz.convert(number)).isEqualTo("Fizz");
 	}
 
 	@Test
 	@Parameters({"5", "10", "20", "25", "35", "40", "50"})
 	public void returnBuzzForInputDivisibleByFive(int number) {
-		assertThat(fizzbuzz.calculate(number)).isEqualTo("Buzz");
+		assertThat(fizzbuzz.convert(number)).isEqualTo("Buzz");
 	}
 
 	@Test
 	@Parameters({"15", "30", "45", "60"})
 	public void returnsFizzBuzzForInputDivisibleByThreeAndFive(int number) {
-		assertThat(fizzbuzz.calculate(number)).isEqualTo("FizzBuzz");
+		assertThat(fizzbuzz.convert(number)).isEqualTo("FizzBuzz");
 	}
 }
